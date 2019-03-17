@@ -151,15 +151,19 @@ void query1(connection *C, int use_mpg, int min_mpg, int max_mpg, int use_ppg,
           "SPG BPG"
        << endl;
   for (auto r : res) {
-    // this flag is to used to handle the space
-    bool first = true;
+    // this flag is to used to handle the space and precision
+    int count = 0;
     for (auto field : r) {
-      if (first) {
+      if (count == 0) {
         cout << field;
-        first = false;
+      } else if (count >= 9) {
+        std::cout.precision(1);
+        std::cout.setf(std::ios::fixed, std::ios::floatfield);
+        cout << " " << field.as<double>();
       } else {
         cout << " " << field;
       }
+      count++;
     }
     cout << endl;
   }
