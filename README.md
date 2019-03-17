@@ -26,6 +26,9 @@ games
 
 
 To run this program:
+
 make
+
 ./test
+
 You can customize the testcases.
