@@ -97,51 +97,51 @@ void query1(connection *C, int use_mpg, int min_mpg, int max_mpg, int use_ppg,
   }
   if (use_ppg) {
     if (flag) {
-      "AND (PPG >= " + to_string(min_ppg) +
-          " AND PPG <= " + to_string(max_ppg) + ") ";
+      query += "AND (PPG >= " + to_string(min_ppg) +
+               " AND PPG <= " + to_string(max_ppg) + ") ";
     } else {
-      "(PPG >= " + to_string(min_ppg) + " AND PPG <= " + to_string(max_ppg) +
-          ") ";
+      query += "(PPG >= " + to_string(min_ppg) +
+               " AND PPG <= " + to_string(max_ppg) + ") ";
     }
     flag = true;
   }
   if (use_rpg) {
     if (flag) {
-      "AND (RPG >= " + to_string(min_rpg) +
-          " AND RPG <= " + to_string(max_rpg) + ") ";
+      query += "AND (RPG >= " + to_string(min_rpg) +
+               " AND RPG <= " + to_string(max_rpg) + ") ";
     } else {
-      "(RPG >= " + to_string(min_rpg) + " AND RPG <= " + to_string(max_rpg) +
-          ") ";
+      query += "(RPG >= " + to_string(min_rpg) +
+               " AND RPG <= " + to_string(max_rpg) + ") ";
     }
     flag = true;
   }
   if (use_apg) {
     if (flag) {
-      "AND (APG >= " + to_string(min_apg) +
-          " AND APG <= " + to_string(max_apg) + ") ";
+      query += "AND (APG >= " + to_string(min_apg) +
+               " AND APG <= " + to_string(max_apg) + ") ";
     } else {
-      "(APG >= " + to_string(min_apg) + " AND APG <= " + to_string(max_apg) +
-          ") ";
+      query += "(APG >= " + to_string(min_apg) +
+               " AND APG <= " + to_string(max_apg) + ") ";
     }
     flag = true;
   }
   if (use_spg) {
     if (flag) {
-      "AND (SPG >= " + to_string(min_spg) +
-          " AND SPG <= " + to_string(max_spg) + ") ";
+      query += "AND (SPG >= " + to_string(min_spg) +
+               " AND SPG <= " + to_string(max_spg) + ") ";
     } else {
-      "(SPG >= " + to_string(min_spg) + " AND SPG <= " + to_string(max_spg) +
-          ") ";
+      query += "(SPG >= " + to_string(min_spg) +
+               " AND SPG <= " + to_string(max_spg) + ") ";
     }
     flag = true;
   }
   if (use_bpg) {
     if (flag) {
-      "AND (BPG >= " + to_string(min_bpg) +
-          " AND BPG <= " + to_string(max_bpg) + ")";
+      query += "AND (BPG >= " + to_string(min_bpg) +
+               " AND BPG <= " + to_string(max_bpg) + ")";
     } else {
-      "(BPG >= " + to_string(min_bpg) + " AND BPG <= " + to_string(max_bpg) +
-          ")";
+      query += "(BPG >= " + to_string(min_bpg) +
+               " AND BPG <= " + to_string(max_bpg) + ")";
     }
     flag = true;
   }

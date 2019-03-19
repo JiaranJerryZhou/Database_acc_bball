@@ -8,6 +8,7 @@ void exercise(connection *C) {
   add_player(C, 16, 7, "Jiaran", "Zhou", 40, 30, 10, 10, 5, 5);
   cout << "all players with 35 to 40 mpg:" << endl;
   */
+  // query1(C, 1, 35, 40, 1, 15, 20, 1, 5, 10, 1, 5, 10, 0, 0, 0, 0, 0, 0);
   query1(C, 1, 35, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
   /*
   cout << endl;
